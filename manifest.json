@@ -4,7 +4,7 @@
     "start_url": "./index.html",
     "display": "standalone",
     "background_color": "#000000",
-    "theme_color": "#ff9900",
+    "theme_color": "#000000",
     "description": "A shopping app for bullish products.",
     "icons": [
         {
