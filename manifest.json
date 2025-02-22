@@ -1,0 +1,21 @@
+{
+    "name": "The Bullish Shop",
+    "short_name": "Bullish Shop",
+    "start_url": "./index.html",
+    "display": "standalone",
+    "background_color": "#000000",
+    "theme_color": "#ff9900",
+    "description": "A shopping app for bullish products.",
+    "icons": [
+        {
+            "src": "icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}

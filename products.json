@@ -1,0 +1,733 @@
+[
+    {
+       "id": "all-caps-all-chill-tshirt",
+       "category": [
+          "Bullish"
+       ],
+       "variations": [
+          "S",
+          "M",
+          "L",
+          "XL",
+          "2XL",
+          "3XL",
+          "4XL",
+          "5XL"
+       ],
+       "title": "ALL CAPS ALL CHILL T-Shirt",
+       "description": "",
+       "fulldescription": "",
+       "stock": 21,
+       "inStock": false,
+       "price": 21,
+       "shipprice": 0.0,
+       "images": [
+          {
+             "id": 1,
+             "src": "images/all-caps-all-chill-tshirt-front.jpg",
+             "alt": "ALL CAPS ALL CHILL T-Shirt (Front)"
+          },
+          {
+             "id": 2,
+             "src": "images/all-caps-all-chill-tshirt-back.jpg",
+             "alt": "ALL CAPS ALL CHILL T-Shirt (Back)"
+          }
+       ],
+       "features": [
+          "100% cotton",
+          "Fabric weight: 5.0–5.3 oz/yd² (170-180 g/m²)",
+          "Open-end yarn",
+          "Tubular fabric",
+          "Taped neck and shoulders",
+          "Double seam at sleeves and bottom hem"
+       ]
+    },
+    {
+       "id": "twenty-one-translations-tshirt",
+       "category": [
+          "Bullish"
+       ],
+       "variations": [
+          "S",
+          "M",
+          "L",
+          "XL",
+          "2XL",
+          "3XL",
+          "4XL",
+          "5XL"
+       ],
+       "title": "Twenty One Translations T-Shirt",
+       "description": "",
+       "fulldescription": "",
+       "stock": 21,
+       "inStock": true,
+       "price": 21,
+       "shipprice": 0.0,
+       "images": [
+          {
+             "id": 1,
+             "src": "images/twenty-one-translations-tshirt.jpg",
+             "alt": "Twenty One Translations T-Shirt"
+          }
+       ],
+       "features": [
+          "100% cotton",
+          "Fabric weight: 5.0–5.3 oz/yd² (170-180 g/m²)",
+          "Open-end yarn",
+          "Tubular fabric",
+          "Taped neck and shoulders",
+          "Double seam at sleeves and bottom hem"
+       ]
+    },
+    {
+       "id": "bullish-camo-cap",
+       "category": [
+          "Bullish"
+       ],
+       "variations": [
+          "S/M",
+          "L/XL"
+       ],
+       "title": "Bullish Camo Cap",
+       "description": "",
+       "fulldescription": "The crown of the cap has stiff fabric behind the front two panels making it structured and well-shaped. The cap's sweatband is moisture-wicking and ensures great fit and comfort.",
+       "stock": 21,
+       "inStock": true,
+       "price": 21,
+       "shipprice": 0,
+       "images": [
+          {
+             "id": 1,
+             "src": "images/bullish-camo-cap-front.jpg",
+             "alt": "Bullish Camo Cap (Front)"
+          },
+          {
+             "id": 2,
+             "src": "images/bullish-camo-cap-left-front.jpg",
+             "alt": "Bullish Camo Cap (Left Front)"
+          },
+          {
+             "id": 3,
+             "src": "images/bullish-camo-cap-detail.jpg",
+             "alt": "Bullish Camo Cap (Detail)"
+          }
+       ],
+       "features": [
+          "63% polyester, 34% cotton, 3% spandex twill",
+          "Structured, 6-panel, mid-profile (with a low-profile embroidery area)",
+          "6 embroidered eyelets",
+          "Stretch band",
+          "Silver undervisor",
+          "Head circumference: 22”–23⅞” (55.9 cm–60.6 cm)"
+       ]
+    },
+    {
+       "id": "the-saylor-tee",
+       "category": [
+          "Bullish"
+       ],
+       "variations": [
+          "S",
+          "M",
+          "L",
+          "XL",
+          "2XL",
+          "3XL",
+          "4XL"
+       ],
+       "title": "The Saylor Tee",
+       "description": "There is no second best tee.",
+       "fulldescription": "",
+       "stock": 21,
+       "inStock": true,
+       "price": 25,
+       "shipprice": 0,
+       "images": [
+          {
+             "id": 1,
+             "src": "images/the-saylor-tee-front.jpg",
+             "alt": "The Saylor Tee (Front)"
+          },
+          {
+             "id": 2,
+             "src": "images/the-saylor-tee-zoomed.jpg",
+             "alt": "The Saylor Tee (Zoomed)"
+          }
+       ],
+       "features": [
+          "100% ring-spun cotton",
+          "Fabric weight: 6.1 oz/yd² (206.8 g/m²)",
+          "Garment-dyed",
+          "Relaxed fit",
+          "7/8″ double-needle topstitched collar",
+          "Twill-taped neck and shoulders for extra durability",
+          "Double-needle armhole, sleeve, and bottom hems"
+       ]
+    },
+    {
+       "id": "we-stack-forever-vintage-cap",
+       "category": [
+          "Bullish"
+       ],
+       "variations": [],
+       "title": "We Stack Forever Vintage Cap",
+       "description": "",
+       "fulldescription": "The hats are distressed, so there might be some color differences between hats of the same color making each item even more unique.",
+       "stock": 21,
+       "inStock": true,
+       "price": 21,
+       "shipprice": 0,
+       "images": [
+          {
+             "id": 1,
+             "src": "images/we-stack-forever-vintage-cap-front.jpg",
+             "alt": "We Stack Forever Vintage Cap (Front)"
+          },
+          {
+             "id": 2,
+             "src": "images/we-stack-forever-vintage-cap-back.jpg",
+             "alt": "We Stack Forever Vintage Cap (Back)"
+          }
+       ],
+       "features": [
+          "100% cotton twill",
+          "6-panel unstructured cap with a low profile",
+          "6 sewn eyelets",
+          "Black sweatband",
+          "Metal snap buckle with an antique brass finish",
+          "Washed-out vintage effect"
+       ]
+    },
+    {
+       "id": "nwc-straight-outta-alby-tshirt",
+       "category": [
+          "Bullish X Alby"
+       ],
+       "variations": [
+          "S",
+          "M",
+          "L",
+          "XL",
+          "2XL",
+          "3XL",
+          "4XL",
+          "5XL"
+       ],
+       "title": "NWC Straight Outta Alby T-Shirt",
+       "description": "",
+       "fulldescription": "",
+       "stock": 21,
+       "inStock": true,
+       "price": 21,
+       "shipprice": 0.0,
+       "images": [
+          {
+             "id": 1,
+             "src": "images/bullish-x-alby/nwc-straight-outta-alby-tshirt.jpg",
+             "alt": "NWC Straight Outta Alby T-Shirt (Front)"
+          }
+       ],
+       "features": [
+          "100% cotton",
+          "Fabric weight: 5.0–5.3 oz/yd² (170-180 g/m²)",
+          "Open-end yarn",
+          "Tubular fabric",
+          "Taped neck and shoulders",
+          "Double seam at sleeves and bottom hem"
+       ]
+    },
+    {
+       "id": "open-source-everything-hat",
+       "category": [
+          "Bullish X Alby"
+       ],
+       "variations": [],
+       "title": "Open Source Everything Hat",
+       "description": "",
+       "fulldescription": "For the open source dev/enthusiast.",
+       "stock": 21,
+       "inStock": true,
+       "price": 21,
+       "shipprice": 0,
+       "images": [
+          {
+             "id": 1,
+             "src": "images/bullish-x-alby/open-source-everything-hat-front.jpg",
+             "alt": "Open Source Everything Hat (Front)"
+          },
+          {
+             "id": 2,
+             "src": "images/bullish-x-alby/open-source-everything-hat-left-front.jpg",
+             "alt": "Open Source Everything Hat (Right Front)"
+          },
+          {
+             "id": 3,
+             "src": "images/bullish-x-alby/open-source-everything-hat-back.jpg",
+             "alt": "Open Source Everything Hat (Back)"
+          }
+       ],
+       "features": [
+          "100% chino cotton",
+          "Soft, unstructured crown",
+          "6-panel, low-profile",
+          "Pre-curved peak",
+          "Stitched eyelets",
+          "Self-fabric strap with a tri-glide buckle",
+          "Sponge-clean only"
+       ]
+    },
+    {
+       "id": "run-your-own-node-mug",
+       "category": [
+          "Bullish X Alby"
+       ],
+       "variations": [],
+       "title": "Run Your Own Node Mug",
+       "description": "",
+       "fulldescription": "You're a noderunner. Of course you say your GMs while sipping from this mug.",
+       "stock": 21,
+       "inStock": true,
+       "price": 21,
+       "shipprice": 0,
+       "images": [
+          {
+             "id": 1,
+             "src": "images/bullish-x-alby/run-your-own-node-mug.jpg",
+             "alt": "Run Your Own Node Mug"
+          }
+       ],
+       "features": [
+          "Ceramic",
+          "11 oz mug dimensions: 3.79″ (9.6 cm) in height, 3.25″ (8.3 cm) in diameter",
+          "Colored rim, inside, and handle",
+          "Dishwasher and microwave safe"
+       ]
+    },
+    {
+       "id": "the-ably-nie",
+       "category": [
+          "Bullish X Alby"
+       ],
+       "variations": [],
+       "title": "The Alby-nie",
+       "description": "",
+       "fulldescription": "If you're looking for something to keep your head warm, this bee it.",
+       "stock": 21,
+       "inStock": true,
+       "price": 21,
+       "shipprice": 0,
+       "images": [
+          {
+             "id": 1,
+             "src": "images/bullish-x-alby/alby-nie-front.jpg",
+             "alt": "The Alby-nie (Front)"
+          },
+          {
+             "id": 2,
+             "src": "images/bullish-x-alby/alby-nie-detail.jpg",
+             "alt": "The Alby-nie (Detail)"
+          }
+       ],
+       "features": [
+          "100% acrylic",
+          "11.5″ (29 cm) waffle knit",
+          "Double layer knit",
+          "Adjustable cuff",
+          "4 top-seam knit"
+       ]
+    },
+    {
+       "id": "noderunner-hoodie",
+       "category": [
+          "Bullish X Alby"
+       ],
+       "variations": [
+          "S",
+          "M",
+          "L",
+          "XL",
+          "2XL",
+          "3XL"
+       ],
+       "title": "Noderunner Hoodie",
+       "description": "",
+       "fulldescription": "This hoodie is for the noderunners and features embroidered logos on each sleeve.",
+       "stock": 21,
+       "inStock": true,
+       "price": 42,
+       "shipprice": 0,
+       "images": [
+          {
+             "id": 1,
+             "src": "images/bullish-x-alby/noderunner-hoodie-front.jpg",
+             "alt": "Noderunner Hoodie (Front)"
+          },
+          {
+             "id": 2,
+             "src": "images/bullish-x-alby/noderunner-hoodie-left.jpg",
+             "alt": "Noderunner Hoodie (Left)"
+          },
+          {
+             "id": 3,
+             "src": "images/bullish-x-alby/noderunner-hoodie-right.jpg",
+             "alt": "Noderunner Hoodie (Right)"
+          },
+          {
+             "id": 4,
+             "src": "images/bullish-x-alby/noderunner-hoodie-lifestyle.jpg",
+             "alt": "Noderunner Hoodie (Lifestyle)"
+          }
+       ],
+       "features": [
+          "50% pre-shrunk cotton, 50% polyester",
+          "Fabric weight: 8.0 oz/yd² (271.25 g/m²)",
+          "Air-jet spun yarn with a soft feel and reduced pilling",
+          "Double-lined hood with matching drawcord",
+          "Quarter-turned body to avoid crease down the middle",
+          "1 × 1 athletic rib-knit cuffs and waistband with spandex",
+          "Front pouch pocket",
+          "Double-needle stitched collar, shoulders, armholes, cuffs, and hem"
+       ]
+    },
+    {
+       "id": "run-your-own-node-tshirt",
+       "category": [
+          "Bullish X Alby"
+       ],
+       "variations": [
+          "S",
+          "M",
+          "L",
+          "XL",
+          "2XL",
+          "3XL",
+          "4XL"
+       ],
+       "title": "Run Your Own Node T-shirt",
+       "description": "",
+       "fulldescription": "Alby Hub makes it easy to run your own node.",
+       "stock": 21,
+       "inStock": true,
+       "price": 25,
+       "shipprice": 0,
+       "images": [
+          {
+             "id": 1,
+             "src": "images/bullish-x-alby/run-your-own-node-tshirt-front.jpg",
+             "alt": "Run Your Own Node T-shirt (Front)"
+          },
+          {
+             "id": 2,
+             "src": "images/bullish-x-alby/run-your-own-node-tshirt-back.jpg",
+             "alt": "Run Your Own Node T-shirt (Back)"
+          },
+          {
+             "id": 3,
+             "src": "images/bullish-x-alby/run-your-own-node-tshirt-lifestyle-front.jpg",
+             "alt": "Run Your Own Node T-shirt (Lifestyle Front)"
+          },
+          {
+             "id": 4,
+             "src": "images/bullish-x-alby/run-your-own-node-tshirt-lifestyle-back.jpg",
+             "alt": "Run Your Own Node T-shirt (Lifestyle Back)"
+          }
+       ],
+       "features": [
+          "100% ring-spun cotton",
+          "Fabric weight: 6.1 oz/yd² (206.8 g/m²)",
+          "Garment-dyed",
+          "Relaxed fit",
+          "7/8″ double-needle topstitched collar",
+          "Twill-taped neck and shoulders for extra durability",
+          "Double-needle armhole, sleeve, and bottom hems"
+       ]
+    },
+    {
+       "id": "alby-hub-corduroy-hat",
+       "category": [
+          "Bullish X Alby"
+       ],
+       "variations": [],
+       "title": "Alby Hub Corduroy Hat",
+       "description": "",
+       "fulldescription": "Alby Hub makes it easy to run your own node.",
+       "stock": 21,
+       "inStock": true,
+       "price": 21,
+       "shipprice": 0,
+       "images": [
+          {
+             "id": 1,
+             "src": "images/bullish-x-alby/alby-hub-corduroy-hat-front.jpg",
+             "alt": "Alby Hub Corduroy Hat (Front)"
+          },
+          {
+             "id": 2,
+             "src": "images/bullish-x-alby/alby-hub-corduroy-hat-left-front.jpg",
+             "alt": "Alby Hub Corduroy Hat (Left Front)"
+          },
+          {
+             "id": 3,
+             "src": "images/bullish-x-alby/alby-hub-corduroy-hat-detail-1.jpg",
+             "alt": "Alby Hub Corduroy Hat (Detail 1)"
+          },
+          {
+             "id": 4,
+             "src": "images/bullish-x-alby/alby-hub-corduroy-hat-detail-2.jpg",
+             "alt": "Alby Hub Corduroy Hat (Detail 2)"
+          }
+       ],
+       "features": [
+          "100% cotton corduroy",
+          "Soft, unstructured crown",
+          "Cotton twill sweatband and taping",
+          "Adjustable buckle"
+       ]
+    },
+    {
+       "id": "nostr-crossbody-bag",
+       "category": [
+          "Nostr"
+       ],
+       "variations": [],
+       "title": "Nostr Crossbody Bag",
+       "description": "",
+       "fulldescription": "",
+       "stock": 21,
+       "inStock": true,
+       "price": 30,
+       "shipprice": 0.0,
+       "images": [
+          {
+             "id": 1,
+             "src": "images/nostr/nostr-crossbody-bag-front.jpg",
+             "alt": "Nostr Crossbody Bag (Front)"
+          },
+          {
+             "id": 2,
+             "src": "images/nostr/nostr-crossbody-bag-back.jpg",
+             "alt": "Nostr Crossbody Bag (Back)"
+          },
+          {
+             "id": 3,
+             "src": "images/nostr/nostr-crossbody-bag-inside.jpg",
+             "alt": "Nostr Crossbody Bag (Inside)"
+          }
+       ],
+       "features": [  
+ "Bag size: 5.7″ × 7.7″ × 2″ (14.5 cm × 19.5 cm × 5 cm)", 
+ "Fabric weight: 9 oz./yd.² (305 g/m²)",    
+ "Water-resistant and durable",  
+ "Sturdy fabric with fusible backing to add firmness",  
+ "Inside and outside pockets",  
+ "Adjustable strap",  
+ "Two-way zipper",
+ "100% polyester"
+       ]
+    },
+    {
+       "id": "nostr-bolt",
+       "category": [
+          "Nostr"
+       ],
+       "variations": [
+          "S",
+          "M",
+          "L",
+          "XL",
+          "2XL",
+          "3XL",
+          "4XL",
+          "5XL"
+       ],
+       "title": "NO⚡TR T-Shirt",
+       "description": "",
+       "fulldescription": "",
+       "stock": 21,
+       "inStock": true,
+       "price": 21,
+       "shipprice": 0.0,
+       "images": [
+          {
+             "id": 1,
+             "src": "images/nostr/nostr-bolt-tshirt.jpg",
+             "alt": "Nostr Bolt"
+          }
+       ],
+       "features": [
+          "100% cotton",
+          "Fabric weight: 5.0–5.3 oz/yd² (170-180 g/m²)",
+          "Open-end yarn",
+          "Tubular fabric",
+          "Taped neck and shoulders",
+          "Double seam at sleeves and bottom hem"
+       ]
+    },
+    {
+       "id": "that-70s-nostr-tshirt",
+       "category": [
+          "Nostr"
+       ],
+       "variations": [
+          "S",
+          "M",
+          "L",
+          "XL",
+          "2XL",
+          "3XL",
+          "4XL"
+       ],
+       "title": "That '70s Nostr T-Shirt",
+       "description": "",
+       "fulldescription": "",
+       "stock": 21,
+       "inStock": true,
+       "price": 25,
+       "shipprice": 0.0,
+       "images": [
+          {
+             "id": 1,
+             "src": "images/nostr/that-70s-nostr-tshirt.jpg",
+             "alt": "That '70s Nostr T-Shirt"
+          }
+       ],
+       "features": [
+          "100% ring-spun cotton",
+          "Fabric weight: 6.1 oz/yd² (206.8 g/m²)",
+          "Garment-dyed",
+          "Relaxed fit",
+          "7/8″ double-needle topstitched collar",
+          "Twill-taped neck and shoulders for extra durability",
+          "Double-needle armhole, sleeve, and bottom hems"
+       ]
+    },
+    {
+       "id": "bitcoin-nostr-mixtape-tshirt",
+       "category": [
+          "Nostr"
+       ],
+       "variations": [
+          "S",
+          "M",
+          "L",
+          "XL",
+          "2XL",
+          "3XL",
+          "4XL",
+          "5XL"
+       ],
+       "title": "Bitcoin + Nostr Mixtape T-Shirt",
+       "description": "",
+       "fulldescription": "",
+       "stock": 21,
+       "inStock": true,
+       "price": 21,
+       "shipprice": 0.0,
+       "images": [
+          {
+             "id": 1,
+             "src": "images/nostr/bitcoin-nostr-mixtape-tshirt.jpg",
+             "alt": "Bitcoin + Nostr Mixtape T-Shirt"
+          }
+       ],
+       "features": [
+          "100% cotton",
+          "Fabric weight: 5.0–5.3 oz/yd² (170-180 g/m²)",
+          "Open-end yarn",
+          "Tubular fabric",
+          "Taped neck and shoulders",
+          "Double seam at sleeves and bottom hem"
+       ]
+    },
+    {
+       "id": "odell-growing-nostr-tshirt",
+       "category": [
+          "Nostr"
+       ],
+       "variations": [
+          "S",
+          "M",
+          "L",
+          "XL",
+          "2XL",
+          "3XL",
+          "4XL",
+          "5XL"
+       ],
+       "title": "ODELL Growing Nostr T-Shirt",
+       "description": "",
+       "fulldescription": "",
+       "stock": 21,
+       "inStock": true,
+       "price": 21,
+       "shipprice": 0.0,
+       "images": [
+          {
+             "id": 1,
+             "src": "images/nostr/odell-growing-nostr-tshirt.jpg",
+             "alt": "ODELL Growing Nostr T-Shirt"
+          }
+       ],
+       "features": [
+          "Solid colors are 100% Airlume combed and ring-spun cotton",
+          "Fabric weight: 4.2 oz./yd.² (142 g/m²)",
+          "Pre-shrunk fabric",
+          "Side-seamed construction",
+          "Tear-away label",
+          "Shoulder-to-shoulder taping"   
+       ]
+    },
+     {
+       "id": "genesis-block-mouse-pad",
+       "category": [
+          "Accessories"
+       ],
+       "variations": [],
+       "title": "Genesis Block Mouse Pad",
+       "description": "",
+       "fulldescription": "",
+       "stock": 21,
+       "inStock": true,
+       "price": 15,
+       "shipprice": 0.0,
+       "images": [
+          {
+             "id": 1,
+             "src": "images/genesis-block-mouse-pad-front.jpg",
+             "alt": "Genesis Block Mouse Pad (Front)"
+          },
+          {
+             "id": 2,
+             "src": "images/genesis-block-mouse-pad-detail.jpg",
+             "alt": "Genesis Block Mouse Pad (Detail)"
+          }
+       ],
+       "features": [
+           "Size: 8.7 x 7.1 inches"
+       ]
+    },
+    {
+       "id": "bullish-test",
+       "category": [
+          "Test"
+       ],
+       "variations": [],
+       "title": "Bullish",
+       "description": "This is a demo product to be used while testing.",
+       "fulldescription": "You won't receive anything when you purchase this item except bragging rights that you helped test bullish.space!",
+       "stock": 21,
+       "inStock": true,
+       "price": 1,
+       "shipprice": 0.0,
+       "images": [
+          {
+             "id": 1,
+             "src": "images/bullish-logo.png",
+             "alt": "Bullish Logo"
+          }
+       ],
+       "features": []
+    }
+ ]
+ 

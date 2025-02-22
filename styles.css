@@ -1,0 +1,140 @@
+body {
+    background-color: #000; /* Set background to black */
+    font-family: 'Courier New', Courier, monospace;
+    color: #fff; /* Set text color to white */
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2em;
+    color: #ff9900; /* Title color */
+}
+
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.product-card {
+    background-color: #1a1a1a; /* Dark gray background for cards */
+    border: 2px solid #333; /* Darker border */
+    border-radius: 0; /* Set border radius to 0 */
+    box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.2); /* Light shadow for depth */
+    position: relative;
+    font-size: 0.9em;
+}
+
+.product-card .title-bar {
+    background-color: #ff9900; /* Title bar color */
+    color: #000; /* Text color in title bar */
+    padding: 5px;
+    font-weight: bold;
+    display: flex; /* Use flexbox for alignment */
+    justify-content: space-between; /* Space between title and buttons */
+    align-items: center; /* Center items vertically */
+}
+
+.product-card h2 {
+    margin: 0;
+    font-size: 1em; /* Adjusted font size for title */
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+}
+
+.product-card .price {
+    font-weight: bold;
+    color: #00ff00; /* Green color for price */
+}
+
+.product-card .stock {
+    color: #ff0000; /* Red color for stock status */
+}
+
+.product-card .features {
+    margin-top: 10px;
+    font-size: 0.8em;
+    color: #ccc; /* Light gray for features */
+}
+
+.cart-container {
+    background-color: #1a1a1a; /* Dark gray background for cart */
+    border: 2px solid #333; /* Darker border */
+    border-radius: 0; /* Set border radius to 0 */
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.cart-items {
+    max-height: 200px; /* Limit height for scrolling */
+    overflow-y: auto; /* Enable scrolling */
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    border-bottom: 1px solid #333; /* Divider between items */
+}
+
+.cart-item:last-child {
+    border-bottom: none; /* Remove border for last item */
+}
+
+.cart-total {
+    font-weight: bold;
+    color: #00ff00; /* Green color for total */
+    margin-top: 10px;
+}
+
+.title-bar {
+    background-color: #ff9900; /* Title bar color */
+    color: #000; /* Text color */
+    padding: 5px;
+    font-weight: bold;
+    display: flex; /* Use flexbox for alignment */
+    justify-content: space-between; /* Space between title and buttons */
+    align-items: center; /* Center items vertically */
+}
+
+.title-bar .title {
+    flex-grow: 1; /* Allow the title to take up available space */
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide overflowed text */
+    text-overflow: ellipsis; /* Show ellipsis for overflowed text */
+    max-width: calc(100% - 100px); /* Adjust max-width based on button width */
+}
+
+.button-container {
+    display: flex; /* Use flexbox for button alignment */
+    justify-content: flex-end; /* Align buttons to the right */
+}
+
+.title-bar button {
+    background-color: #fff; /* Button background */
+    border: 1px solid #000; /* Button border */
+    border-radius: 0; /* Set border radius to 0 */
+    margin-left: 5px; /* Space between buttons */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: transform 0.1s; /* Smooth transition for the depress effect */
+}
+
+.title-bar button:hover {
+    background-color: #e0e0e0; /* Light gray on hover */
+}
+
+/* Depress visual effect on click */
+.title-bar button:active {
+    transform: translateY(2px); /* Moves the button down slightly */
+    box-shadow: none; /* Removes shadow if any */
+}
