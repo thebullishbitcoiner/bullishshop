@@ -135,6 +135,23 @@ function renderProducts(products) {
     });
 }
 
+async function fetchBitcoinPrice() {
+    try {
+        const response = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd');
+        const data = await response.json();
+        const price = data.bitcoin.usd;
+        document.getElementById('bitcoin-ticker').textContent = `$${price}`;
+    } catch (error) {
+        console.error('Error fetching Bitcoin price:', error);
+        document.getElementById('bitcoin-ticker').textContent = 'Error fetching Bitcoin price';
+    }
+}
+
+// Fetch the price immediately and then every 60 seconds
+fetchBitcoinPrice();
+setInterval(fetchBitcoinPrice, 60000); // Update every 60 seconds
+
+
 // Call the function to fetch and render products
 fetchProducts();
 

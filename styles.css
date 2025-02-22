@@ -1,3 +1,12 @@
+.ticker {
+    background-color: #000; /* Background color */
+    color: #ff9900; /* Text color */
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    z-index: 1000; /* Ensure it appears above other content */
+}
+
 body {
     background-color: #000; /* Set background to black */
     font-family: 'Courier New', Courier, monospace;
