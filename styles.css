@@ -36,10 +36,17 @@ h1 {
     background-color: #1a1a1a; /* Dark gray background for cards */
     border: 2px solid #333; /* Darker border */
     border-radius: 0; /* Set border radius to 0 */
-    box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.2); /* Light shadow for depth */
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3); /* Increased shadow for depth */
     position: relative;
     font-size: 0.9em;
+    transition: transform 0.2s, box-shadow 0.2s; /* Smooth transition for hover effects */
 }
+
+.product-card:hover {
+    transform: translateY(-5px); /* Slightly lift the card on hover */
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.5); /* More pronounced shadow on hover */
+}
+
 
 .product-card .title-bar {
     background-color: #ff9900; /* Title bar color */
@@ -52,22 +59,14 @@ h1 {
 }
 
 .product-card h2 {
-    margin: 0;
+    margin: 10px; /* Adjust margin for spacing below the image */
     font-size: 1em; /* Adjusted font size for title */
+    color: #fff; /* Set title color */
 }
 
 .product-card img {
     max-width: 100%;
     height: auto;
-}
-
-.product-card .price {
-    font-weight: bold;
-    color: #00ff00; /* Green color for price */
-}
-
-.product-card .stock {
-    color: #ff0000; /* Red color for stock status */
 }
 
 .product-card .features {
@@ -102,7 +101,7 @@ h1 {
 
 .cart-total {
     font-weight: bold;
-    color: #00ff00; /* Green color for total */
+    color: #ff9900; /* Green color for total */
     margin-top: 10px;
 }
 
@@ -112,16 +111,12 @@ h1 {
     padding: 5px;
     font-weight: bold;
     display: flex; /* Use flexbox for alignment */
-    justify-content: space-between; /* Space between title and buttons */
+    justify-content: space-between; /* Space between title and price */
     align-items: center; /* Center items vertically */
 }
 
-.title-bar .title {
-    flex-grow: 1; /* Allow the title to take up available space */
-    white-space: nowrap; /* Prevent text from wrapping */
-    overflow: hidden; /* Hide overflowed text */
-    text-overflow: ellipsis; /* Show ellipsis for overflowed text */
-    max-width: calc(100% - 100px); /* Adjust max-width based on button width */
+.title-bar .price {
+    font-weight: bold;
 }
 
 .button-container {
@@ -130,12 +125,18 @@ h1 {
 }
 
 .title-bar button {
+    height: 21px; /* Increase height for better appearance */
+    width: 21px; /* Increase width for better appearance */
+    font-size: 1.2em; /* Increase font size for larger text */
     background-color: #fff; /* Button background */
     border: 1px solid #000; /* Button border */
     border-radius: 0; /* Set border radius to 0 */
     margin-left: 5px; /* Space between buttons */
     cursor: pointer; /* Pointer cursor on hover */
     transition: transform 0.1s; /* Smooth transition for the depress effect */
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center text horizontally */
+    align-items: center; /* Center text vertically */
 }
 
 .title-bar button:hover {
@@ -146,4 +147,39 @@ h1 {
 .title-bar button:active {
     transform: translateY(2px); /* Moves the button down slightly */
     box-shadow: none; /* Removes shadow if any */
+}
+
+.image-carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden; /* Hide overflow */
+}
+
+.image-container {
+    display: flex; /* Align images in a row */
+    transition: transform 0.5s ease; /* Smooth transition */
+}
+
+.product-image {
+    width: 100%; /* Set image width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.dots {
+    text-align: center;
+    margin-top: 10px; /* Space between images and dots */
+}
+
+.dot {
+    display: inline-block;
+    width: 10px; /* Width of the dot */
+    height: 10px; /* Height of the dot */
+    margin: 0 5px; /* Space between dots */
+    background-color: #bbb; /* Default color for inactive dots */
+    border-radius: 50%; /* Make dots circular */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.dot.active {
+    background-color: #ff9900; /* Color for the active dot */
 }

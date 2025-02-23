@@ -1,3 +1,21 @@
+let cart = []; // Array to hold cart items
+let bitcoinPrice = 0; // Global variable to store the Bitcoin price
+
+// Function to fetch Bitcoin price
+async function fetchBitcoinPrice() {
+    try {
+        const response = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd');
+        const data = await response.json();
+        bitcoinPrice = data.bitcoin.usd; // Update the global variable
+        document.getElementById('bitcoin-ticker').textContent = `$${bitcoinPrice}`;
+        return bitcoinPrice; // Return the fetched price
+    } catch (error) {
+        console.error('Error fetching Bitcoin price:', error);
+        document.getElementById('bitcoin-ticker').textContent = 'Error fetching Bitcoin price';
+        return null; // Return null in case of an error
+    }
+}
+
 // Function to fetch products from the local JSON file
 async function fetchProducts() {
     try {
@@ -11,7 +29,6 @@ async function fetchProducts() {
         console.error('There has been a problem with your fetch operation:', error);
     }
 }
-let cart = []; // Array to hold cart items
 
 // Function to add item to cart
 function addToCart(product) {
@@ -28,12 +45,15 @@ function addToCart(product) {
 function updateCartDisplay() {
     const cartItemsContainer = document.getElementById('cart-items');
     cartItemsContainer.innerHTML = ''; // Clear existing items
-    let total = 0;
+    let totalInSats = 0;
 
     cart.forEach(item => {
         const cartItem = document.createElement('div');
         cartItem.className = 'cart-item';
-        cartItem.textContent = `${item.title} (x${item.quantity}) - ${(item.price * item.quantity).toFixed(2)}`;
+        
+        // Calculate the total price for the item in sats
+        const itemTotalInSats = Math.round((item.price * item.quantity / bitcoinPrice) * 100000000); // Convert to sats and round
+        cartItem.textContent = `${item.title} (x${item.quantity}) - ${itemTotalInSats} sats`;
 
         // Create remove button
         const removeButton = document.createElement('button');
@@ -42,12 +62,13 @@ function updateCartDisplay() {
         cartItem.appendChild(removeButton);
 
         cartItemsContainer.appendChild(cartItem);
-        total += item.price * item.quantity; // Calculate total
+        totalInSats += itemTotalInSats; // Accumulate total in sats
     });
 
     const cartTotal = document.getElementById('cart-total');
-    cartTotal.textContent = `Total: ${total.toFixed(2)}`; // Update total display
+    cartTotal.textContent = `Total: ${totalInSats} sats`; // Update total display to show only in sats
 }
+
 
 // Function to remove item from cart
 function removeFromCart(productId) {
@@ -75,11 +96,12 @@ function renderProducts(products) {
         const titleBar = document.createElement('div');
         titleBar.className = 'title-bar';
 
-        // Create title text
-        const titleText = document.createElement('span');
-        titleText.className = 'title'; // Add the class for styling
-        titleText.textContent = product.title; // Set the title in the title bar
-        titleBar.appendChild(titleText);
+        // Create price element
+        const price = document.createElement('div');
+        price.className = 'price';
+        const priceInSats = (product.price / bitcoinPrice * 100000000).toFixed(0); // Convert price to satoshis
+        price.textContent = `${priceInSats} sats`; // Set the price in sats
+        titleBar.appendChild(price);
 
         // Create button container
         const buttonContainer = document.createElement('div');
@@ -102,23 +124,45 @@ function renderProducts(products) {
 
         productCard.appendChild(titleBar);
 
-        // Create product image
-        const img = document.createElement('img');
-        img.src = product.images[0].src; // Display the first image
-        img.alt = product.images[0].alt;
-        productCard.appendChild(img);
+        // Create image carousel
+        const carousel = document.createElement('div');
+        carousel.className = 'image-carousel';
 
-        // Create price element
-        const price = document.createElement('div');
-        price.className = 'price';
-        price.textContent = `${product.price.toFixed(2)}`;
-        productCard.appendChild(price);
+        const imageContainer = document.createElement('div');
+        imageContainer.className = 'image-container';
 
-        // Create stock status
-        const stockStatus = document.createElement('div');
-        stockStatus.className = 'stock';
-        stockStatus.textContent = product.inStock ? 'In Stock' : 'Out of Stock';
-        productCard.appendChild(stockStatus);
+        product.images.forEach((image, index) => {
+            const img = document.createElement('img');
+            img.src = image.src; // Display the image
+            img.alt = image.alt;
+            img.className = 'product-image'; // Add class for styling
+            img.style.display = index === 0 ? 'block' : 'none'; // Show only the first image
+            imageContainer.appendChild(img);
+        });
+
+        carousel.appendChild(imageContainer);
+
+        // Create dots for navigation
+        const dotsContainer = document.createElement('div');
+        dotsContainer.className = 'dots';
+
+        product.images.forEach((_, index) => {
+            const dot = document.createElement('span');
+            dot.className = 'dot';
+            dot.onclick = () => {
+                showImage(index, imageContainer, product.images.length);
+                updateDots(index, dotsContainer); // Update dots when a dot is clicked
+            };
+            dotsContainer.appendChild(dot);
+        });
+
+        carousel.appendChild(dotsContainer);
+        productCard.appendChild(carousel); // Append the carousel to the product card
+
+        // Create title under the image
+        const productTitle = document.createElement('h2');
+        productTitle.textContent = product.title; // Set the title under the image
+        productCard.appendChild(productTitle);
 
         // Create features list
         const featuresList = document.createElement('ul');
@@ -135,23 +179,39 @@ function renderProducts(products) {
     });
 }
 
-async function fetchBitcoinPrice() {
-    try {
-        const response = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd');
-        const data = await response.json();
-        const price = data.bitcoin.usd;
-        document.getElementById('bitcoin-ticker').textContent = `$${price}`;
-    } catch (error) {
-        console.error('Error fetching Bitcoin price:', error);
-        document.getElementById('bitcoin-ticker').textContent = 'Error fetching Bitcoin price';
+// Function to show the selected image
+function showImage(index, imageContainer, totalImages) {
+    const images = imageContainer.getElementsByTagName('img');
+    for (let i = 0; i < totalImages; i++) {
+        images[i].style.display = i === index ? 'block' : 'none'; // Show the selected image
     }
 }
 
-// Fetch the price immediately and then every 60 seconds
-fetchBitcoinPrice();
+// Function to update dots
+function updateDots(activeIndex, dotsContainer) {
+    const dots = dotsContainer.getElementsByClassName('dot');
+    for (let i = 0; i < dots.length; i++) {
+        dots[i].className = i === activeIndex ? 'dot active' : 'dot'; // Update active class
+    }
+}
+
+// Example function that uses the Bitcoin price
+function displayBitcoinPriceInCart() {
+    const cartTotal = document.getElementById('cart-total');
+    const totalInBitcoin = (cartTotal.textContent.replace('Total: ', '') / bitcoinPrice).toFixed(6); // Convert total to Bitcoin
+    cartTotal.textContent += ` (Approx: ${totalInBitcoin} BTC)`; // Display approximate Bitcoin value
+}
+
+// Main function to fetch Bitcoin price and then products
+async function init() {
+    const price = await fetchBitcoinPrice(); // Wait for the Bitcoin price
+    if (price) {
+        await fetchProducts(); // Fetch products only if the price was successfully retrieved
+    }
+}
+
+// Call the init function to start the process
+init();
+
+// Set an interval to fetch the Bitcoin price every 60 seconds
 setInterval(fetchBitcoinPrice, 60000); // Update every 60 seconds
-
-
-// Call the function to fetch and render products
-fetchProducts();
-
