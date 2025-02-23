@@ -176,6 +176,44 @@ function renderProducts(products) {
 
         // Append the product card to the container
         productContainer.appendChild(productCard);
+
+        // Add swipe support to the carousel
+        addSwipeSupport(carousel, imageContainer, product.images.length);
+    });
+}
+
+// Function to add swipe support to the carousel
+function addSwipeSupport(carousel, imageContainer, totalImages) {
+    let startX = 0;
+    let currentIndex = 0;
+
+    carousel.addEventListener('touchstart', (event) => {
+        startX = event.touches[0].clientX; // Get the starting touch position
+    });
+
+    carousel.addEventListener('touchmove', (event) => {
+        const moveX = event.touches[0].clientX;
+        const diffX = startX - moveX;
+
+        // Prevent default scrolling behavior
+        event.preventDefault();
+    });
+
+    carousel.addEventListener('touchend', (event) => {
+        const endX = event.changedTouches[0].clientX;
+        const diffX = startX - endX;
+
+        if (diffX > 50) {
+            // Swipe left
+            currentIndex = (currentIndex + 1) % totalImages; // Move to the next image
+        } else if (diffX < -50) {
+            // Swipe right
+            currentIndex = (currentIndex - 1 + totalImages) % totalImages; // Move to the previous image
+        }
+
+        // Show the selected image
+        showImage(currentIndex, imageContainer, totalImages);
+        updateDots(currentIndex, carousel.querySelector('.dots')); // Update dots based on the current index
     });
 }
 
