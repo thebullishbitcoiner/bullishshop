@@ -39,14 +39,7 @@ h1 {
     box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3); /* Increased shadow for depth */
     position: relative;
     font-size: 0.9em;
-    transition: transform 0.2s, box-shadow 0.2s; /* Smooth transition for hover effects */
 }
-
-.product-card:hover {
-    transform: translateY(-5px); /* Slightly lift the card on hover */
-    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.5); /* More pronounced shadow on hover */
-}
-
 
 .product-card .title-bar {
     background-color: #ff9900; /* Title bar color */
