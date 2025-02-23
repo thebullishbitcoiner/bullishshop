@@ -137,26 +137,39 @@ function renderProducts(products) {
             img.alt = image.alt;
             img.className = 'product-image'; // Add class for styling
             img.style.display = index === 0 ? 'block' : 'none'; // Show only the first image
+            img.dataset.index = index; // Store the index in a data attribute
             imageContainer.appendChild(img);
+
+            // Add click event to each image
+            img.onclick = () => {
+                const currentIndex = (index + 1) % product.images.length; // Move to the next image
+                showImage(currentIndex, imageContainer, product.images.length);
+                if (product.images.length > 1) {
+                    updateDots(currentIndex, carousel.querySelector('.dots')); // Update dots if there are multiple images
+                }
+            };
         });
 
         carousel.appendChild(imageContainer);
 
-        // Create dots for navigation
-        const dotsContainer = document.createElement('div');
-        dotsContainer.className = 'dots';
+        // Create dots for navigation only if there are multiple images
+        if (product.images.length > 1) {
+            const dotsContainer = document.createElement('div');
+            dotsContainer.className = 'dots';
 
-        product.images.forEach((_, index) => {
-            const dot = document.createElement('span');
-            dot.className = 'dot';
-            dot.onclick = () => {
-                showImage(index, imageContainer, product.images.length);
-                updateDots(index, dotsContainer); // Update dots when a dot is clicked
-            };
-            dotsContainer.appendChild(dot);
-        });
+            product.images.forEach((_, index) => {
+                const dot = document.createElement('span');
+                dot.className = 'dot';
+                dot.onclick = () => {
+                    showImage(index, imageContainer, product.images.length);
+                    updateDots(index, dotsContainer); // Update dots when a dot is clicked
+                };
+                dotsContainer.appendChild(dot);
+            });
 
-        carousel.appendChild(dotsContainer);
+            carousel.appendChild(dotsContainer);
+        }
+
         productCard.appendChild(carousel); // Append the carousel to the product card
 
         // Create title under the image
@@ -176,70 +189,21 @@ function renderProducts(products) {
 
         // Append the product card to the container
         productContainer.appendChild(productCard);
-
-        // Add swipe support to the carousel
-        addSwipeSupport(carousel, imageContainer, product.images.length);
     });
 }
 
-function addSwipeSupport(carousel, imageContainer, totalImages) {
-    let startX = 0;
-    let currentIndex = 0;
-
-    const handlePointerDown = (event) => {
-        startX = event.clientX || event.touches[0].clientX; // Get the starting position
-    };
-
-    const handlePointerMove = (event) => {
-        const moveX = event.clientX || event.touches[0].clientX;
-        const diffX = startX - moveX;
-
-        // Prevent default scrolling behavior
-        event.preventDefault();
-    };
-
-    const handlePointerUp = (event) => {
-        const endX = event.clientX || event.changedTouches[0].clientX;
-        const diffX = startX - endX;
-
-        if (diffX > 50) {
-            // Swipe left
-            currentIndex = (currentIndex + 1) % totalImages;
-        } else if (diffX < -50) {
-            // Swipe right
-            currentIndex = (currentIndex - 1 + totalImages) % totalImages;
-        }
-
-        showImage(currentIndex, imageContainer, totalImages);
-        updateDots(currentIndex, carousel.querySelector('.dots'));
-    };
-
-    carousel.addEventListener('pointerdown', handlePointerDown);
-    carousel.addEventListener('pointermove', handlePointerMove);
-    carousel.addEventListener('pointerup', handlePointerUp);
-}
-
-// Function to show the selected image
 function showImage(index, imageContainer, totalImages) {
-    const images = imageContainer.getElementsByTagName('img');
-    for (let i = 0; i < totalImages; i++) {
-        images[i].style.display = i === index ? 'block' : 'none'; // Show the selected image
-    }
+    const images = imageContainer.querySelectorAll('.product-image');
+    images.forEach((img, i) => {
+        img.style.display = i === index ? 'block' : 'none'; // Show the current image
+    });
 }
 
-// Function to update dots
-function updateDots(activeIndex, dotsContainer) {
-    const dots = dotsContainer.getElementsByClassName('dot');
-    for (let i = 0; i < dots.length; i++) {
-        dots[i].className = i === activeIndex ? 'dot active' : 'dot'; // Update active class
-    }
-}
-
-// Example function that uses the Bitcoin price
-function displayBitcoinPriceInCart() {
-    const cartTotal = document.getElementById('cart-total');
-    const totalInBitcoin = (cartTotal.textContent.replace('Total: ', '') / bitcoinPrice).toFixed(6); // Convert total to Bitcoin
-    cartTotal.textContent += ` (Approx: ${totalInBitcoin} BTC)`; // Display approximate Bitcoin value
+function updateDots(currentIndex, dotsContainer) {
+    const dots = dotsContainer.querySelectorAll('.dot');
+    dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === currentIndex); // Add 'active' class to the current dot
+    });
 }
 
 // Main function to fetch Bitcoin price and then products
