@@ -142,6 +142,9 @@ function renderProducts(products) {
 
             // Add click event to each image
             img.onclick = () => {
+                event.preventDefault(); // Prevent default action (e.g., scrolling)
+        event.stopPropagation(); // Stop the event from bubbling up
+                
                 const currentIndex = (index + 1) % product.images.length; // Move to the next image
                 showImage(currentIndex, imageContainer, product.images.length);
                 if (product.images.length > 1) {
